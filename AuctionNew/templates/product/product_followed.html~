@@ -1,0 +1,13 @@
+{% extends "account/base.html" %}
+{% block title %} Home| Products {% endblock %}
+{% load material_form %}
+{% load staticfiles %}
+
+{% block content %}
+
+{ for item in items }
+<h1>{{item.Title}}</h1>
+<h2> heyy </h2>
+
+
+{% endblock %}

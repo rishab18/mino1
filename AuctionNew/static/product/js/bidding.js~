@@ -1,0 +1,21 @@
+var bidding = (function(){
+	
+    function loadContent() {
+        var productid = $(this).attr('data-id');
+	$("#add-bid-btn").attr("data-id",productid);
+        $.ajax({
+            dataType: 'json',
+            method: 'GET',
+            url: '/products/product/productBid/' + productid +"/",
+            success: function(data){
+                console.log(data);
+            }
+	});
+    }
+    
+    return {
+        init : function() {
+            $(".bid-now-button").click(loadContent);
+        }
+    };
+})()
